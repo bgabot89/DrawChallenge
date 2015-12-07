@@ -1,0 +1,66 @@
+
+
+<body ng-controller="MainCtrl">
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">The Drawing Per Day Challenge</h1>
+    <p class="lead">Each day, you will be required to sketch one picture. Once you're done, post the image with the credentials below </p>
+  </div>
+</div>
+
+<h1> This is the portfolio of.... {{comment}} </h1>
+<p> Input name of person here: </p>
+<input type ="text" ng-model="comment"/> 
+
+
+<div class="input-group">
+<form role ="form" ng-submit="addPicture()">
+<div class="form-group">
+
+<br>
+			<p> Picture Name </p>
+			<input type="text" placeholder= "name of picture" ng-model="newPicture.name">
+			</div>
+			<div class="form-group">
+			<p> Day # </p>
+			<input type="number" placeholder="day #" name="quantity" min="1" max="365" ng-model="newPicture.day">
+			</div>
+			<div class="form-group">
+			<p> Comment </p>
+			<input type="text" placeholder="type comment here" ng-model="newPicture.comment">
+			</div>
+			<div class="form-group">
+			<p> Image URL </p>
+			<input type="text" ng-model="newPicture.image" class="form-control" placeholder="Image">
+			</div>
+			<br>
+			<div class="form-group">
+			<p> Time lapse (in hours) </p>
+			<input type="text" ng-model="newPicture.timelapse" class="form-control" placeholder="Time Taken">
+			</div>
+
+			<button type="submit" class="btn btn-success">Add Picture</button>
+			</form>
+			</div>
+
+<br>
+
+	<div ng-repeat="pic in pictures">
+		<div class="row">
+			<div class="col-xs-3">
+			<ul>
+				<img ng-src="{{pic.image}}" class="img-responsive">
+				<p><strong>{{pic.name}}</strong></p>
+<p><strong>day: {{pic.day}}</strong></p>
+<p><strong>comment: {{pic.comment}}</strong></p>
+<p><strong>hours taken: {{pic.timelapse}}</strong></p>
+</li>
+</ul>
+
+
+		</div>
+		<div class="col-xs-8">
+
+
+</body>

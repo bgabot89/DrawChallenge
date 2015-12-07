@@ -1,0 +1,23 @@
+{
+  "name": "angular-weekend-lab",
+  "version": "1.0.0",
+  "description": "Built on the top of the `$http` service, Angular’s `$resource` is a service that lets you interact with RESTful backends easily. `$resource` is very similar to models in Rails. In this tutorial, we're going to make use of a book API that can be found here: `http://daretodiscover.herokuapp.com/books`. The request syntax of the books API follows the same pattern as the wine API that you used yesterday.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sf-wdi-22-23/angular-resource-lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sf-wdi-22-23/angular-resource-lab/issues"
+  },
+  "homepage": "https://github.com/sf-wdi-22-23/angular-resource-lab#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
